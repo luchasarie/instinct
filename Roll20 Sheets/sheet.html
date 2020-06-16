@@ -1,0 +1,1293 @@
+<h1>PMD Instinct Sheet</h1>
+<h6 class="center">1.0 Official</h6>
+
+<p class="center">Welcome to your sheet, </p>
+
+<div class="center">
+    <input type="text" name="attr_character_name"
+        style="font-size: 30px;text-shadow: 0.5px -1px black;width: 100%;text-align:center">
+    <div class="label" style="text-align:center;">CHARACTER NAME</span></div>
+    <div style='margin-top:25px'></div>
+</div>
+
+<div class="3col">
+    <div class="borderdiv">
+        <div style="separator"></div>
+        <input type="number" value="1"
+            style="font-size:30px;border-style: solid;text-align: center;margin-top:25px;margin-bottom:5px;"
+            name="attr_lvl">
+        <div style="separator"></div>
+        <div style="separator"></div>
+        <span class="sheet-tooltip">
+            <h3>Level</h3><span><strong>Level</strong><br>Each level increases: <h6><br> - All your stat points by 1.
+                    <br> - Your HP by 2.</h6></span>
+        </span>
+        <div style='separator'></div>
+    </div>
+    <div class="col" class="borderdiv">
+        <span>TYPE 1</span>
+        <select class="hiding class" style="text-align:center;" name="attr_type">
+            <option value=""></option>
+            <option value="Fire">Fire</option>
+            <option value="Grass">Grass</option>
+            <option value="Water">Water</option>
+            <option value="Ice">Ice</option>
+            <option value="Electric">Electric</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Ground">Ground</option>
+            <option value="Flying">Flying</option>
+            <option value="Poison">Poison</option>
+            <option value="Rock">Rock</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Bug">Bug</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Steel">Steel</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Dark">Dark</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Normal">Normal</option>
+        </select>
+        <div style="separator2"></div>
+        <span>TYPE 2</span>
+        <input type="hidden" name="attr_custom_class">
+        <select class="hiding class" style="text-align:center;" name="attr_type2">
+            <option value=""></option>
+            <option value="Fire">Fire</option>
+            <option value="Poison">Poison</option>
+            <option value="Grass">Grass</option>
+            <option value="Water">Water</option>
+            <option value="Ice">Ice</option>
+            <option value="Electric">Electric</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Ground">Ground</option>
+            <option value="Flying">Flying</option>
+            <option value="Rock">Rock</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Bug">Bug</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Steel">Steel</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Dark">Dark</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Normal">Normal</option>
+        </select>
+    </div>
+    <div style="separator"></div>
+    <div class="col" style="text-align:center;border:solid;padding:5px;">
+        <span>Alignment:</span>
+        <input type="text" name="attr_alig">
+        <div style='margin-top:5px'></div>
+        <span>Player Name:</span>
+        <input type="text" name="attr_pname">
+        <div style='margin-top:10px'></div>
+    </div>
+</div><!-- level, type, alignment, player name -->
+
+<hr>
+
+<div class="3colrow">
+    <div class="col">
+        <div class="2colpro">
+            <div class="stats2">
+                <span class="sheet-tooltip">STRENGTH<span><strong>Strength</strong><br>Increases the power of physical
+                        moves.</br></span></span>
+                <input type="number" name="attr_str" value="1" min="1" />
+            </div>
+            <div class="separator"></div>
+            <div class="stats2">
+                <span class="sheet-tooltip">INTELLIGENCE<span><strong>Intelligence</strong><br>Increases the power of
+                        special moves.</br></span></span>
+                <input type="number" name="attr_int" value="1" min="1" />
+            </div>
+        </div><!-- strength and intelligence -->
+        <div class="2colpro">
+            <div class="stats2">
+                <span class="sheet-tooltip">CONSTITUTION<span><strong>Constitution</strong><br>Each point increases:<h6>
+                            <br> - HP by 3. <br> - Physical Defense by 0,5. <br><br>It also makes you more resistant to
+                            certain toxins.</h6></br></br></br></br></br></span></span>
+                <input type="number" name="attr_con" value="1" min="1" />
+            </div>
+            <div class="separator"></div>
+            <div class="stats2">
+                <span class="sheet-tooltip">
+                    <div class="statfont2">WISDOM</div><span><strong>Wisdom</strong><br>Each point increases:<h6> <br> -
+                            PP by 0,6 <br> - Special Defense by 0,5. <br><br> Your move limit also increases by 1 every
+                            10 Wisdom Points.</h6></br></br></br></br></br></span>
+                </span>
+                <input type="number" name="attr_wis" value="1" min="1" max="{@maxstatindividual}" />
+            </div>
+        </div><!-- constitution and Wisdom -->
+        <div class="separator2"></div>
+        <div class="stats">
+            <span class="sheet-tooltip">DEXTERITY<span><strong>Dexterity</strong><br> Each point increases:<h6> <br> -
+                        The power of certain moves. <br> - Your evasion and Accuraccy by 1. <br><br> Your movespeed and
+                        evasion amount also increase by 1 every 50 Dexterity Points</h6>
+                    </br></br></br></br></br></span></span>
+            <div class="separator2"></div>
+            <input type="number" name="attr_dex" value="1"></input>
+        </div><!-- dexterity -->
+        <div class="separator"></div>
+    </div>
+    <div class="col">
+        <strong>
+            <div
+                style="border-style:groove; border-width:8px;border-left:8px solid red;border-right:8px solid red; border-color:4C1B1B;">
+                - Max HP -
+                <input type="number" name="attr_maxhp" style="width:100px" readonly value="14" />
+                <div class="separator2"></div>
+                - Current HP -
+                <input type="number" name="attr_chp" style="width:80px" value="14" />
+            </div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+        </strong>
+        <strong>
+            <div
+                style="border-style:groove;border-width:8px; border-left:6px solid blue; border-right:8px solid blue; border-color:4C1B1B;">
+                - Max PP -
+                <input type="number" name="attr_maxpp" style="width:100px" readonly value="4" />
+                <div class="separator2"></div>
+                - Current PP -
+                <input type="number" name="attr_cpp" max="@{maxpp}" style="width:80px" value="0" />
+            </div>
+            <div class="separator2"></div>
+        </strong>
+        <div class="center">
+            <input type="checkbox" name="attr_refresher" value=1 />Refresh
+        </div>
+    </div>
+    <div class="col">
+        <div style='separator'></div>
+        <div
+            style="border-style:outset;border-color:gray;border-width:4px; ; border-left:6px solid purple; border-color:4C1B1B;">
+            <div class="center">
+                <h3>Basics / Special Actions</h3>
+            </div>
+        </div>
+        <div class="3col">
+            <div class="center">
+                <strong>
+                    <span class="sheet-tooltip3">Initiative<span><strong>Initiative Roll</strong><br>
+                            <h6>Rolls an initiative dice and tries to send to the tracker. Fails most of the time.</h6>
+                            </br>
+                        </span></span>
+                    <button type='roll'
+                        value='&{template:default} {{name= Initiative from @{character_name}}} {{Initiative Value= [[1d20  + (@{tdex}/2)]]}} &{tracker}'
+                        name='roll_initiative'></button>
+                    <br>
+                    <br>
+                    <span class="sheet-tooltip3">Defense<span><strong>Defense</strong><br>
+                            <h6>Defends against an attack..</h6></br>
+                        </span></span>
+                    <button type='roll'
+                        value='&{template:default} {{name= Defense from @{character_name}}} {{Physical Defense= [[@{def}]]}}  {{Special Defense= [[@{sdef}]]}}'
+                        name='roll_defense'></button>
+                    <br>
+                    <br>
+                    <span class="sheet-tooltip3">Evade<span><strong>Evade</strong><br>Tries to evade an enemy attack.
+                            Read the "evasion" section on the PHB for details.</br></span></span>
+                    <button type='roll'
+                        value='&{template:default} {{name= Evade from @{character_name}}} {{Evasion Value= [[@{eva}]] }}  {{Max Evasions= [[@{maxevades}]] }}'
+                        name='roll_evade'></button>
+                </strong>
+            </div>
+            <div class="center">
+                <strong>
+                    <span class="sheet-tooltip3">Roll(SA)<span><strong>Roll</strong><br>Rolls in a direction for your
+                            max movement distance +1. Doesn't trigger AOO. You land prone afterwards.<br><br>
+                            <h6>*Can be used while prone.</h6><br></br></br>
+                        </span></span>
+                    <br>
+                    <button type='roll'
+                        value='&{template:default} {{name= Roll from @{character_name}}} {{Roll Distance= [[@{maxmovement}+1]]}} {{Description= "@{character_name} rolls away from combat!(Does not proc AOO)"}}'
+                        name='roll_roll'></button>
+                    <br>
+                    <br>
+                    <span class="sheet-tooltip3">Dash(SA)<span><strong>Dash</strong><br>Move at double your max movement
+                            distance at a single direction.</br></span></span>
+                    <button type='roll'
+                        value='&{template:default} {{name= Dash from @{character_name}}} {{Dash Distance= [[@{maxmovement}*2]]}} {{Description= "@{character_name} dashes at a high speed!}}'
+                        name='roll_dash'></button>
+                    <br>
+                    <br>
+                    <span class="sheet-tooltip3">Throw(SA)<span><strong>Throw</strong><br>Throws something in your hand
+                            in a direction. Deals damage if it contacts something.</br></span></span>
+                    <button type='roll'
+                        value='&{template:default} {{name= Throw from @{character_name}}} {{Throw Distance= [[ceil(@{tstr}/20)+2)]]}} {{Damage= "@{tstr} normal damage."}} {{Description= "@{character_name} throws something!"}}'
+                        name='roll_throw'></button>
+                </strong>
+            </div>
+            <div class="center">
+                <strong>
+                    <span class="sheet-tooltip3">Grapple(SA)<span><strong>Unskilled Grapple</strong><br>Tries to grapple
+                            an enemy with a strength lower than yours. If the enemy's strength is higher, you fail
+                            automatically. If grapple is succesful, you can try to pin, or throw the enemy into the side
+                            or prone. Check "grappling rules" in the PHB for more. </br></span></span>
+                    <br>
+                    <button type='roll'
+                        value='&{template:default} {{name= Unskilled Grapple from @{character_name}}} {{Strength= [[@{tstr}]]}} {{Acccuraccy= [[60+@{acc}]]}} {{Acc. Roll= [[1d100]]}} '
+                        name='roll_grapple'></button>
+                    <br>
+                    <br>
+                    <span class="sheet-tooltip3">Dive(SA)<span><strong>Dive</strong><br>Anticipates the use of an AOE
+                            attack. If an AOE strikes your area, you evade the effects(most of the time). You land prone
+                            afterwards.</br></span></span>
+                    <button type='roll' value='&{template:default} {{name= Dive from @{character_name}}}'
+                        name='roll_dive'></button>
+                    <br>
+                    <br>
+                    <span class="sheet-tooltip3">Wait(SA)<span><strong>Wait</strong><br>Stores your action to be used in
+                            another pokémon's turn. Can't be used for team attacks.</br></span></span>
+                    <button type='roll' value='&{template:default} {{name= Wait from @{character_name}}}'
+                        name='roll_wait'></button>
+                </strong>
+            </div>
+        </div>
+    </div>
+</div><!-- Main Page -->
+
+<hr>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span title="Moves"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2"><span title="Abilities"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3"><span title="Stats Details"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4"><span title="Notes"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5"><span title="Inventory"></span>
+
+<div class="sheet-tab-content sheet-tab1">
+    <h1>Moves</h1>
+    <hr>
+    <div class="3colrow">
+        <div class="col"></div>
+        <div class="col" style='border-width:1px;border-style:dashed;text-align:center'>
+            Max Moves
+            <input type="number" name="attr_maxmoves" readonly value="4" />
+        </div>
+        <div= class="col">
+    </div>
+</div>
+<hr>
+<div class="2colrow">
+    <div class="col">
+        <h2>Lesser / Tier 1</h2>
+        <hr>
+        <fieldset class="repeating_pamoves10">
+            <!-- Beginning of moves -->
+            <div style="border-top: 2px solid black; border-width:2px padding: 3px;">
+                <input type="text" name="attr_movename" placeholder="Move Name" style="movename"> <!-- Move Name -->
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default}{{name= @{movename}}} {{Tier= Tier 1}} {{Description= @{movedesc}}} {{PP Cost= @{moveppcost}}} {{Damage= [[ceil((@{movestab}+1)*((0.80+[[1d20/100]])*((@{movedamage}*@{moveattr})+(@{dabmovepower}+@{dabmoveattr}))))]] @{movetype} Damage}} {{Acccuraccy= [[@{moveaccuraccy}+@{acc}]]}} {{Acc. Roll= [[1d100]]}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack" style="border-top: 2px dashed red; border-width:2px padding: 3px;">
+                    <div>
+                        PP Cost:<input type="number" style="width:40px; font-size:14px; text-align:center;"
+                            name="attr_moveppcost">
+                        Move Power:<input type="number" style="width:45px; font-size:14px;" name="attr_movedamage">
+                        Move Accuraccy:<input type="number" style="width:50px; font-size:14px; text-align:center;"
+                            name="attr_moveaccuraccy">
+                        S.T.A.B <input type='checkbox' value='0.5' name="attr_movestab" />
+                        <div class="separator2" style="border-top: 2px dashed gold;"></div>
+                        <br>
+                        Damage Type:<select class="hiding class" style="text-align:center; width:150px"
+                            name="attr_movetype">
+                            <option value=""></option>
+                            <option value="Fire">Fire</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <br>
+                        Attribute Used:
+                        <!-- Attribute Selector -->
+                        <select class="hiding class" style="text-align:center; width:150px" name="attr_moveattr">
+                            <option value="@{tstr}">Strength</option>
+                            <option value="@{tint}">Intelligence</option>
+                            <option value="@{tdex}">Dexterity</option>
+                        </select>
+                        <br>
+                        D.A.B <input type="checkbox" class="movetest">
+                        <div class="moveattack">
+                            Attribute D.A.B Bonus
+                            <select class="hiding class" style="text-align:center; width:150px" name="attr_dabmoveattr">
+                                <option value="0">No Bonus</option>
+                                <option value="@{tstr}">Strength</option>
+                                <option value="@{tint}">Intelligence</option>
+                                <option value="@{tdex}">Dexterity</option>
+                            </select>
+                            <br>
+                            Second D.A.B Power <input type="number" value="0" name="attr_dabmovepower">
+                        </div>
+                    </div>
+                    <div class="separator"></div> <!-- Description -->
+                    <textarea placeholder="Description" name="attr_movedesc"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <hr>
+    </div>
+    <div class="col">
+        <h2>Minor / Tier 2</h2>
+        <hr>
+        <fieldset class="repeating_pamoves11">
+            <!-- Beginning of moves -->
+            <div style="border-top: 2px solid black; border-width:2px padding: 3px;">
+                <input type="text" name="attr_movename2" placeholder="Move Name" style="movename"> <!-- Move Name -->
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default}{{name= @{movename2}}} {{Tier= Tier 2}} {{Description= @{movedesc2}}} {{PP Cost= @{moveppcost2}}} {{Damage= [[ceil((@{movestab2}+1)*((0.80+[[1d20/100]])*((@{movedamage2}*@{moveattr2})+(@{dabmovepower2}+@{dabmoveattr2}))))]] @{movetype} Damage}} {{Acccuraccy= [[@{moveaccuraccy2}+@{acc}]]}} {{Acc. Roll= [[1d100]]}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack" style="border-top: 2px dashed red; border-width:2px padding: 3px;">
+                    <div>
+                        PP Cost:<input type="number" style="width:40px; font-size:14px; text-align:center;"
+                            name="attr_moveppcost2">
+                        Move Power:<input type="number" style="width:45px; font-size:14px;" name="attr_movedamage2">
+                        Move Accuraccy:<input type="number" style="width:50px; font-size:14px; text-align:center;"
+                            name="attr_moveaccuraccy2">
+                        S.T.A.B <input type='checkbox' value='0.5' name="attr_movestab2" />
+                        <div class="separator2" style="border-top: 2px dashed gold;"></div>
+                        <br>
+                        Damage Type:<select class="hiding class" style="text-align:center; width:150px"
+                            name="attr_movetype2">
+                            <option value=""></option>
+                            <option value="Fire">Fire</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <br>
+                        Attribute Used:
+                        <!-- Attribute Selector -->
+                        <select class="hiding class" style="text-align:center; width:150px" name="attr_moveattr2">
+                            <option value="@{tstr}">Strength</option>
+                            <option value="@{tint}">Intelligence</option>
+                            <option value="@{tdex}">Dexterity</option>
+                        </select>
+                        <br>
+                        D.A.B <input type="checkbox" class="movetest">
+                        <div class="moveattack">
+                            Attribute D.A.B Bonus
+                            <select class="hiding class" style="text-align:center; width:150px"
+                                name="attr_dabmoveattr2">
+                                <option value="0">No Bonus</option>
+                                <option value="@{tstr}">Strength</option>
+                                <option value="@{tint}">Intelligence</option>
+                                <option value="@{tdex}">Dexterity</option>
+                            </select>
+                            <br>
+                            Second D.A.B Power <input type="number" value="0" name="attr_dabmovepower2">
+                        </div>
+                    </div>
+                    <div class="separator"></div> <!-- Description -->
+                    <textarea placeholder="Description" name="attr_movedesc2"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <hr>
+    </div>
+</div>
+<div class="2colrow">
+    <div class="col">
+        <h2>Normal / Tier 3</h2>
+        <hr>
+        <fieldset class="repeating_pamoves12">
+            <!-- Beginning of moves -->
+            <div style="border-top: 2px solid black; border-width:2px padding: 3px;">
+                <input type="text" name="attr_movename3" placeholder="Move Name" style="movename"> <!-- Move Name -->
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default}{{name= @{movename3}}} {{Tier= Tier 3}} {{Description= @{movedesc3}}} {{PP Cost= @{moveppcost3}}} {{Damage= [[ceil((@{movestab3}+1)*((0.80+[[1d20/100]])*((@{movedamage3}*@{moveattr3})+(@{dabmovepower3}+@{dabmoveattr3}))))]] @{movetype} Damage}} {{Acccuraccy= [[@{moveaccuraccy3}+@{acc}]]}} {{Acc. Roll= [[1d100]]}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack" style="border-top: 2px dashed red; border-width:2px padding: 3px;">
+                    <div>
+                        PP Cost:<input type="number" style="width:40px; font-size:14px; text-align:center;"
+                            name="attr_moveppcost3">
+                        Move Power:<input type="number" style="width:45px; font-size:14px;" name="attr_movedamage3">
+                        Move Accuraccy:<input type="number" style="width:50px; font-size:14px; text-align:center;"
+                            name="attr_moveaccuraccy3">
+                        S.T.A.B <input type='checkbox' value='0.5' name="attr_movestab2" />
+                        <div class="separator2" style="border-top: 2px dashed gold;"></div>
+                        <br>
+                        Damage Type:<select class="hiding class" style="text-align:center; width:150px"
+                            name="attr_movetype3">
+                            <option value=""></option>
+                            <option value="Fire">Fire</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <br>
+                        Attribute Used:
+                        <!-- Attribute Selector -->
+                        <select class="hiding class" style="text-align:center; width:150px" name="attr_moveattr3">
+                            <option value="@{tstr}">Strength</option>
+                            <option value="@{tint}">Intelligence</option>
+                            <option value="@{tdex}">Dexterity</option>
+                        </select>
+                        <br>
+                        D.A.B <input type="checkbox" class="movetest">
+                        <div class="moveattack">
+                            Attribute D.A.B Bonus
+                            <select class="hiding class" style="text-align:center; width:150px"
+                                name="attr_dabmoveattr3">
+                                <option value="0">No Bonus</option>
+                                <option value="@{tstr}">Strength</option>
+                                <option value="@{tint}">Intelligence</option>
+                                <option value="@{tdex}">Dexterity</option>
+                            </select>
+                            <br>
+                            Second D.A.B Power <input type="number" value="0" name="attr_dabmovepower3">
+                        </div>
+                    </div>
+                    <div class="separator"></div> <!-- Description -->
+                    <textarea placeholder="Description" name="attr_movedesc3"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <hr>
+    </div>
+    <div class="col">
+        <h2>Major / Tier 4</h2>
+        <hr>
+        <fieldset class="repeating_pamoves12">
+            <!-- Beginning of moves -->
+            <div style="border-top: 2px solid black; border-width:2px padding: 3px;">
+                <input type="text" name="attr_movename4" placeholder="Move Name" style="movename"> <!-- Move Name -->
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default}{{name= @{movename4}}} {{Tier= Tier 4}} {{Description= @{movedesc4}}} {{PP Cost= @{moveppcost4}}} {{Damage= [[ceil((@{movestab4}+1)*((0.80+[[1d20/100]])*((@{movedamage4}*@{moveattr4})+(@{dabmovepower4}+@{dabmoveattr4}))))]] @{movetype} Damage}} {{Acccuraccy= [[@{moveaccuraccy4}+@{acc}]]}} {{Acc. Roll= [[1d100]]}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack" style="border-top: 2px dashed red; border-width:2px padding: 3px;">
+                    <div>
+                        PP Cost:<input type="number" style="width:40px; font-size:14px; text-align:center;"
+                            name="attr_moveppcost4">
+                        Move Power:<input type="number" style="width:45px; font-size:14px;" name="attr_movedamage4">
+                        Move Accuraccy:<input type="number" style="width:50px; font-size:14px; text-align:center;"
+                            name="attr_moveaccuraccy4">
+                        S.T.A.B <input type='checkbox' value='0.5' name="attr_movestab4" />
+                        <div class="separator2" style="border-top: 2px dashed gold;"></div>
+                        <br>
+                        Damage Type:<select class="hiding class" style="text-align:center; width:150px"
+                            name="attr_movetype4">
+                            <option value=""></option>
+                            <option value="Fire">Fire</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <br>
+                        Attribute Used:
+                        <!-- Attribute Selector -->
+                        <select class="hiding class" style="text-align:center; width:150px" name="attr_moveattr4">
+                            <option value="@{tstr}">Strength</option>
+                            <option value="@{tint}">Intelligence</option>
+                            <option value="@{tdex}">Dexterity</option>
+                        </select>
+                        <br>
+                        D.A.B <input type="checkbox" class="movetest">
+                        <div class="moveattack">
+                            Attribute D.A.B Bonus
+                            <select class="hiding class" style="text-align:center; width:150px"
+                                name="attr_dabmoveattr4">
+                                <option value="0">No Bonus</option>
+                                <option value="@{tstr}">Strength</option>
+                                <option value="@{tint}">Intelligence</option>
+                                <option value="@{tdex}">Dexterity</option>
+                            </select>
+                            <br>
+                            Second D.A.B Power <input type="number" value="0" name="attr_dabmovepower4">
+                        </div>
+                    </div>
+                    <div class="separator"></div> <!-- Description -->
+                    <textarea placeholder="Description" name="attr_movedesc4"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <hr>
+    </div>
+</div>
+<div class="2colrow">
+    <div class="col">
+        <h2>Greater / Tier 5</h2>
+        <hr>
+        <fieldset class="repeating_pamoves15">
+            <!-- Beginning of moves -->
+            <div style="border-top: 2px solid black; border-width:2px padding: 3px;">
+                <input type="text" name="attr_movename5" placeholder="Move Name" style="movename"> <!-- Move Name -->
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default}{{name= @{movename5}}} {{Tier= Tier 5}} {{Description= @{movedesc5}}} {{PP Cost= @{moveppcost5}}} {{Damage= [[ceil((@{movestab5}+1)*((0.80+[[1d20/100]])*((@{movedamage5}*@{moveattr5})+(@{dabmovepower5}+@{dabmoveattr5}))))]] @{movetype} Damage}} {{Acccuraccy= [[@{moveaccuraccy5}+@{acc}]]}} {{Acc. Roll= [[1d100]]}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack" style="border-top: 2px dashed red; border-width:2px padding: 3px;">
+                    <div>
+                        PP Cost:<input type="number" style="width:40px; font-size:14px; text-align:center;"
+                            name="attr_moveppcost5">
+                        Move Power:<input type="number" style="width:45px; font-size:14px;" name="attr_movedamage5">
+                        Move Accuraccy:<input type="number" style="width:50px; font-size:14px; text-align:center;"
+                            name="attr_moveaccuraccy5">
+                        S.T.A.B <input type='checkbox' value='0.5' name="attr_movestab5" />
+                        <div class="separator2" style="border-top: 2px dashed gold;"></div>
+                        <br>
+                        Damage Type:<select class="hiding class" style="text-align:center; width:150px"
+                            name="attr_movetype5">
+                            <option value=""></option>
+                            <option value="Fire">Fire</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <br>
+                        Attribute Used:
+                        <!-- Attribute Selector -->
+                        <select class="hiding class" style="text-align:center; width:150px" name="attr_moveattr5">
+                            <option value="@{tstr}">Strength</option>
+                            <option value="@{tint}">Intelligence</option>
+                            <option value="@{tdex}">Dexterity</option>
+                        </select>
+                        <br>
+                        D.A.B <input type="checkbox" class="movetest">
+                        <div class="moveattack">
+                            Attribute D.A.B Bonus
+                            <select class="hiding class" style="text-align:center; width:150px"
+                                name="attr_dabmoveattr5">
+                                <option value="0">No Bonus</option>
+                                <option value="@{tstr}">Strength</option>
+                                <option value="@{tint}">Intelligence</option>
+                                <option value="@{tdex}">Dexterity</option>
+                            </select>
+                            <br>
+                            Second D.A.B Power <input type="number" value="0" name="attr_dabmovepower5">
+                        </div>
+                    </div>
+                    <div class="separator"></div> <!-- Description -->
+                    <textarea placeholder="Description" name="attr_movedesc2"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <hr>
+    </div>
+    <div class="col">
+        <h2>Unique</h2>
+        <hr>
+        <fieldset class="repeating_pamoves16">
+            <!-- Beginning of moves -->
+            <div style="border-top: 2px solid black; border-width:2px padding: 3px;">
+                <input type="text" name="attr_movename2" placeholder="Move Name" style="movename"> <!-- Move Name -->
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default}{{name= @{movename6}}} {{Tier= Unique}} {{Description= @{movedesc6}}} {{PP Cost= @{moveppcost6}}} {{Damage= [[ceil((@{movestab6}+1)*((0.80+[[1d20/100]])*((@{movedamage6}*@{moveattr6})+(@{dabmovepower6}+@{dabmoveattr6}))))]] @{movetype} Damage}} {{Acccuraccy= [[@{moveaccuraccy6}+@{acc}]]}} {{Acc. Roll= [[1d100]]}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack" style="border-top: 2px dashed red; border-width:2px padding: 3px;">
+                    <div>
+                        PP Cost:<input type="number" style="width:40px; font-size:14px; text-align:center;"
+                            name="attr_moveppcost6">
+                        Move Power:<input type="number" style="width:45px; font-size:14px;" name="attr_movedamage6">
+                        Move Accuraccy:<input type="number" style="width:50px; font-size:14px; text-align:center;"
+                            name="attr_moveaccuraccy6">
+                        S.T.A.B <input type='checkbox' value='0.5' name="attr_movestab6" />
+                        <div class="separator2" style="border-top: 2px dashed gold;"></div>
+                        <br>
+                        Damage Type:<select class="hiding class" style="text-align:center; width:150px"
+                            name="attr_movetype6">
+                            <option value=""></option>
+                            <option value="Pure">Pure</option>
+                            <option value="Fire">Fire</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <br>
+                        Attribute Used:
+                        <!-- Attribute Selector -->
+                        <select class="hiding class" style="text-align:center; width:150px" name="attr_moveattr6">
+                            <option value="@{tstr}">Strength</option>
+                            <option value="@{tint}">Intelligence</option>
+                            <option value="@{tdex}">Dexterity</option>
+                        </select>
+                        <br>
+                        D.A.B <input type="checkbox" class="movetest">
+                        <div class="moveattack">
+                            Attribute D.A.B Bonus
+                            <select class="hiding class" style="text-align:center; width:150px"
+                                name="attr_dabmoveattr6">
+                                <option value="0">No Bonus</option>
+                                <option value="@{tstr}">Strength</option>
+                                <option value="@{tint}">Intelligence</option>
+                                <option value="@{tdex}">Dexterity</option>
+                            </select>
+                            <br>
+                            Second D.A.B Power <input type="number" value="0" name="attr_dabmovepower6">
+                        </div>
+                    </div>
+                    <div class="separator"></div> <!-- Description -->
+                    <textarea placeholder="Description" name="attr_movedesc2"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <hr>
+    </div>
+</div>
+</div>
+<div class="sheet-tab-content sheet-tab2">
+    <h1>Abilities</h1>
+    <div class="separator"></div>
+    <div class="3colrow">
+        <div class="col">
+            <fieldset class="repeating_pamoves1">
+                <input type="text" name="attr_pamovename1" placeholder="Ability Name" style="width:150px">
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default} {{name= @{pamovename1}}} {{Tier= @{pamovetier1}}} {{Type= @{pamoveclass1}}} {{Description= @{pamovedesc1}}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <select name="attr_pamovetier1" class="pamovetier">
+                        <option value="Unique">Unique</option>
+                        <option value="Tier 5">Greater</option>
+                        <option value="Tier 4">Major</option>
+                        <option value="Tier 3">Normal</option>
+                        <option value="Tier 2">Minor</option>
+                        <option value="Tier 1">Lesser</option>
+                    </select>
+                    <select name="attr_pamoveclass1" class="pamoveclass">
+                        <option value="Active">Active</option>
+                        <option value="Passive">Passive</option>
+                    </select>
+                    <textarea placeholder="Description" name="attr_pamovedesc1"></textarea>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col">
+            <fieldset class="repeating_pamoves2">
+                <input type="text" name="attr_pamovename2" placeholder="Ability Name" style="width:150px">
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default} {{name= @{pamovename2}}} {{Tier= @{pamovetier2}}} {{Type= @{pamoveclass2}}} {{Description= @{pamovedesc2}}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <select name="attr_pamovetier2" class="pamovetier">
+                        <option value="Unique">Unique</option>
+                        <option value="Tier 5">Greater</option>
+                        <option value="Tier 4">Major</option>
+                        <option value="Tier 3">Normal</option>
+                        <option value="Tier 2">Minor</option>
+                        <option value="Tier 1">Lesser</option>
+                    </select>
+                    <select name="attr_pamoveclass2" class="pamoveclass">
+                        <option value="Active">Active</option>
+                        <option value="Passive">Passive</option>
+                    </select>
+                    <textarea placeholder="Description" name="attr_pamovedesc2"></textarea>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col">
+            <fieldset class="repeating_pamoves3">
+                <input type="text" name="attr_pamovename3" placeholder="Ability Name" style="width:150px">
+                <button class="moveroll" type="roll" style="margin-right:1px;" name="roll_move"
+                    value='&{template:default} {{name= @{pamovename3}}} {{Tier= @{pamovetier3}}} {{Type= @{pamoveclass3}}} {{Description= @{pamovedesc3}}}'>
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <select name="attr_pamovetier3" class="pamovetier">
+                        <option value="Unique">Unique</option>
+                        <option value="Tier 5">Greater</option>
+                        <option value="Tier 4">Major</option>
+                        <option value="Tier 3">Normal</option>
+                        <option value="Tier 2">Minor</option>
+                        <option value="Tier 1">Lesser</option>
+                    </select>
+                    <select name="attr_pamoveclass3" class="pamoveclass">
+                        <option value="Active">Active</option>
+                        <option value="Passive">Passive</option>
+                    </select>
+                    <textarea placeholder="Description" name="attr_pamovedesc3"></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="sheet-tab-content sheet-tab3">
+    <h1>Stats Details</h1>
+    <div class="3colrow">
+        <div class="col">
+            <div style="margin:7px;margin-right:3px;  border-style: dashed;border-width: 1px;">
+                <div class="center">
+                    <hr>
+                    </hr>
+                    <div style='separator'></div>
+                    <h4>Stat Growth</h4>
+                    (Still manual KEK)
+                    <div style='separator'></div>
+                    <hr>
+                    </hr>
+                    <div class="2colrow">
+                        <div class="col">
+                            Strength
+                            <input type="number" value=1 min=1 max=5 name="attr_strgrowth">
+                            <br></br>
+                            <br></br>
+                            Intelligence
+                            <input type="number" value=1 min=1 max=5 name="attr_intgrowth">
+                            <br></br>
+                            <br></br>
+                            Constitution
+                            <input type="number" value=1 min=1 max=5 name="attr_congrowth">
+                            <br></br>
+                            <br></br>
+                        </div>
+                        <div class="col">
+                            Wisdom
+                            <input type="number" value=1 min=1 max=5 name="attr_wisgrowth">
+                            <br></br>
+                            <br></br>
+                            Dexterity
+                            <input type="number" value=1 min=1 max=5 name="attr_dexgrowth">
+                            <br></br>
+                            <br></br>
+                            <span style="font-size: 12px;">Free Points </span>
+                            <input type="number" value=3 min=3 max=5 name="attr_FPgrowth">
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
+                    <hr>
+                    </hr>
+                </div>
+            </div>
+            <div style="margin:7px;margin-right:3px;  border-style: dashed;border-width: 1px;">
+                <div class="center">
+                    <hr>
+                    </hr>
+                    <div style='separator'></div>
+                    <h4>Stat Tier</h4>
+                    (Beta Feature)
+                    <div style='separator'></div>
+                    <hr>
+                    </hr>
+                    <div class="2colrow">
+                        <div class="col">
+                            <h6>
+                                <span class="sheet-tooltip">Strength <span><strong>Strength Tier</strong>
+                                        <h6><br>Does nothing. <br>So far.</br></br></h6>
+                                    </span></span>
+                                <div class="separator"></div>
+                                <span class="sheet-tooltip">Intelligence <span><strong>Intelligence Tier</strong>
+                                        <h6><br>Also does nothing.<br>So far.</br></br></h6>
+                                    </span></span>
+                                <div class="separator"></div>
+                                <span class="sheet-tooltip">Constitution <span><strong>Constitution Tier</strong>
+                                        <h6><br>Increases by 1 every 100 Constution points you have. <br>Each tier
+                                            increases your HP growth per constitution by 1.</br></br></h6>
+                                    </span></span>
+                                <div class="separator"></div>
+                                <span class="sheet-tooltip">Wisdom <span><strong>Wisdom Tier</strong>
+                                        <h6><br>Nothing at all. <br>yup.</br></br></h6>
+                                    </span></span>
+                                <div class="separator"></div>
+                                <span class="sheet-tooltip">Dexterity <span><strong>Dexterity Tier</strong>
+                                        <h6><br>Increases by 1 every 50 Dexterity points you have. <br>Each tier
+                                            increases your Max Evasions and Max Movements per turn by 1.</br></br></h6>
+                                    </span></span>
+                            </h6>
+                        </div>
+                        <div class="col">
+                            <input type="number" name="attr_strtier" readonly value="1" />
+                            <div class="separator2"></div>
+                            <input type="number" name="attr_inttier" readonly value="1" />
+                            <div class="separator2"></div>
+                            <input type="number" name="attr_contier" readonly value="1" />
+                            <div class="separator2"></div>
+                            <input type="number" name="attr_wistier" readonly value="1" />
+                            <div class="separator2"></div>
+                            <input type="number" name="attr_dextier" readonly value="1" />
+                        </div>
+                    </div>
+                    <hr>
+                    </hr>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div style="margin:7px;margin-right:3px;  border-style: dashed;border-width: 1px;">
+                <div class="center">
+                    <hr>
+                    </hr>
+                    <div class='separator'></div>
+                    <h4>Advanced Stats</h4>
+                    lotta numbers
+                    <div class='separator'></div>
+                    <hr>
+                    </hr>
+                    <div class="3col">
+                        Physical Defense
+                        <br></br>
+                        <input type="number" name="attr_def" readonly value="0" />
+                        <div class='separator'></div>
+                        Special Defense
+                        <br></br>
+                        <input type="number" name="attr_sdef" readonly value="0" />
+                        <div class='separator'></div>
+                        Evasion
+                        <br></br>
+                        <input type="number" name="attr_eva" readonly value="11" />
+                        <div class='separator'></div>
+                        <br></br>
+                        Max Movement
+                        <br></br>
+                        <input type="number" name="attr_maxmovement" readonly value="4" />
+                        <div class='separator'></div>
+                        Max Evades
+                        <br></br>
+                        <input type="number" name="attr_maxevades" readonly value="0" />
+                        <div class='separator'></div>
+                        Accuraccy
+                        <br></br>
+                        <input type="number" name="attr_acc" readonly value="1" />
+                        <div class='separator'></div>
+                        <br></br><br></br><br></br>
+                        Min Total Stats
+                        <br></br>
+                        <input type="number" name="attr_totalstat" readonly value="4" />
+                        <div class='separator'></div>
+                        Max Individual Stat
+                        <br></br>
+                        <input type="number" name="attr_individualstat" readonly value="0" />
+                        <br></br>
+                    </div>
+
+                    <hr>
+                    </hr>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div style="margin:7px;margin-right:3px;  border-style: dashed;border-width: 1px;">
+                <div class="center">
+                    <hr>
+                    </hr>
+                    <div style='separator'></div>
+                    <h4>Stat Multiplier</h4>
+                    For buffs or debuffs, treat as percentages.
+                    <div style='separator'></div>
+                    <hr>
+                    </hr>
+                    <div class="2colrow">
+                        <div class="col">
+                            Strength Modifier
+                            <input type="number" value=100 min=0 name="attr_strmod">
+                            <br></br>
+                            <br></br>
+                            Intelligence Modifier
+                            <input type="number" value=100 min=0 name="attr_intmod">
+                            <br></br>
+                            <br></br>
+                        </div>
+                        <div class="col">
+                            Wisdom Modifier
+                            <input type="number" value=100 min=1 name="attr_wismod">
+                            <br></br>
+                            <br></br>
+                            Constitution Modifier
+                            <input type="number" value=100 min=0 name="attr_conmod">
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
+                    Dexterity
+                    <br></br>
+                    Modifier
+                    <br></br>
+                    <input type="number" value=100 min=1 name="attr_dexmod">
+                    <hr>
+                    </hr>
+                </div>
+            </div>
+            <div style="margin:7px;margin-right:3px;  border-style: dashed;border-width: 1px;">
+                <div class="center">
+                    <hr>
+                    </hr>
+                    <div style='separator'></div>
+                    <h4>True Stats</h4>
+                    Stats ACTUALLY used in calculations
+                    <div style='separator'></div>
+                    <hr>
+                    </hr>
+                    <div class="2colrow">
+                        <div class="col">
+                            True Strength
+                            <input type="number" readonly value=1 min=1 name="attr_tstr">
+                            <br></br>
+                            <br></br>
+                            True Intelligence
+                            <input type="number" readonly value=1 min=1 name="attr_tint">
+                            <br></br>
+                            <br></br>
+                        </div>
+                        <div class="col">
+                            True Wisdom
+                            <input type="number" readonly value=1 min=1 name="attr_twis">
+                            <br></br>
+                            <br></br>
+                            True Constitution
+                            <input type="number" readonly value=1 min=1 name="attr_tcon">
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
+                    True
+                    <br></br>
+                    Dexterity
+                    <br></br>
+                    <input type="number" readonly value=1 min=1 name="attr_tdex">
+                    <hr>
+                    </hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sheet-tab-content sheet-tab4">
+    <h1> Notes</h1>
+    <div class="3colrow">
+        <div class="col">
+            <fieldset class="repeating_pamoves7">
+                <input type="text" placeholder="Note Title" name="attr_notename1" />
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <div class="separator"></div>
+                    <textarea placeholder="Just annotate whatever you want lol" name="attr_note1"></textarea>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col">
+            <fieldset class="repeating_pamoves8">
+                <input type="text" placeholder="Note Title" name="attr_notename2" />
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <div class="separator"></div>
+                    <textarea placeholder="Just annotate whatever you want lol" name="attr_note2"></textarea>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col">
+            <fieldset class="repeating_pamoves9">
+                <input type="text" placeholder="Note Title" name="attr_notename3" />
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <div class="separator"></div>
+                    <textarea placeholder="Just annotate whatever you want lol" name="attr_note3"></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="sheet-tab-content sheet-tab5">
+    <h1>Inventory</h1>
+    <div class="2colrow">
+        <div class="col">
+            <fieldset class="repeating_pamoves16">
+                <input type="text" name="attr_itemname"></input>
+                <button class="moveroll" type="roll" name="inventoryroll"
+                    value="&{template:default} {{name=@{character_name} used an item!}} {{Item= @{itemname}}} {{Item Effect= @{itemeffect}}}">
+                </button>
+                <input type="checkbox" class="movetest">
+                <div class="moveattack">
+                    <div class="separator"></div>
+                    <textarea placeholder="Item Description" name="attr_itemeffect"></textarea>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col">
+            <div class="separator"></div>
+            <h4>Backpack Equipped</h4>
+            <input type="text" style="text-align:center;" placeholder="Name">
+            <p>Size</p>
+            <select class="hiding class" style="text-align:center;" name="attr_size">
+                <option value="4">Small</option>
+                <option value="7">Medium</option>
+                <option value="9">Big</option>
+                <option value="12">Enormous</option>
+                <option value="15">Snorlax</option>
+            </select>
+            <p>Max Slots</p>
+            <input type="number" name="attr_maxslots" readonly value="0" />
+            <p>Pokebucks</p>
+            <input type="number" name="attr_poke" value="0" />
+        </div>
+    </div>
+</div>
+
+<hr>
+<!-- Scripts and shit -->
+<script type="text/worker">
+on("change:con change:conmod change:refresher", function() {
+	getAttrs(["con","conmod"], function(v) {
+		let conTotal = v.con;
+		let conmodTotal = v.conmod/100
+		let trueCon = Math.round(conTotal * conmodTotal);
+		setAttrs({ tcon: trueCon }); 
+	});
+});
+</script><!-- True Con -->
+<script type="text/worker">
+on("change:wis change:wismod change:refresher", function() {
+	getAttrs(["wis","wismod"], function(v) {
+		let wisTotal = v.wis;
+		let wismodTotal = v.wismod/100
+		let trueWis = Math.round(wisTotal * wismodTotal);
+		setAttrs({ twis: trueWis }); 
+	});
+});
+</script><!-- True Wis -->
+<script type="text/worker">
+on("change:dex change:dexmod change:refresher", function() {
+	getAttrs(["dex","dexmod"], function(v) {
+		let dexTotal = v.dex;
+		let dexmodTotal = v.dexmod/100
+		let truedex = Math.round(dexTotal * dexmodTotal);
+		setAttrs({ tdex: truedex }); 
+	});
+});
+</script><!-- True Dex -->
+<script type="text/worker">
+on("change:str change:strmod change:refresher", function() {
+	getAttrs(["str","strmod"], function(v) {
+		let strTotal = v.str;
+		let strmodTotal = v.strmod/100
+		let truestr = Math.round(strTotal * strmodTotal);
+		setAttrs({ tstr: truestr }); 
+	});
+});
+</script><!-- True Str -->
+<script type="text/worker">
+on("change:int change:intmod change:refresher", function() {
+	getAttrs(["int","intmod"], function(v) {
+		let intTotal = v.int;
+		let intmodTotal = v.intmod/100
+		let trueint = Math.round(intTotal * intmodTotal);
+		setAttrs({ tint: trueint }); 
+	});
+});
+</script><!-- True Int -->
+
+
+<script type="text/worker">
+on("change:size change:refresher", function() {
+	getAttrs(["size"], function(v) {
+		let sizeTotal = v.size;
+		let MAXSLOTS = sizeTotal;
+		setAttrs({ maxslots: MAXSLOTS }); 
+	});
+});
+</script><!-- maxslots -->
+
+<script type="text/worker">
+on("change:tcon change:refresher", function() {
+	getAttrs(["tcon"], function(v) {
+		console.log("tcon = " + v.tcon);
+		let conTotal = Math.ceil((v.tcon) / 100);
+		let CONTIER = conTotal;
+		setAttrs({ contier: CONTIER }); 
+	});
+});
+</script><!-- contier -->
+
+<script type="text/worker">
+on("change:tcon change:lvl change:contier change:refresher", function() {
+	getAttrs(["tcon","lvl","contier"], function(v) {
+		let tconTotal = v.tcon;
+		let contierTotal = v.contier + 1;
+		let lvlTotal = v.lvl * 2;
+		let maxHP = 10 + (tconTotal*contierTotal) + lvlTotal;
+		setAttrs({ maxhp: maxHP }); 
+	});
+});
+</script><!-- maxhp -->
+
+<script type="text/worker">
+on("change:twis change:refresher", function() {
+	getAttrs(["twis"], function(v) {
+		console.log("twis = " + v.twis);
+		let twisTotal = Math.floor((v.twis)/1.5);
+		let maxPP = 3 + twisTotal;
+		setAttrs({ maxpp: maxPP }); 
+	});
+});
+</script><!-- maxpp -->
+
+<script type="text/worker">
+on("change:tdex change:refresher", function() {
+	getAttrs(["tdex"], function(v) {
+		let tdexTotal = v.tdex;
+		let EVA = 10 + tdexTotal;
+		setAttrs({ eva: EVA }); 
+	});
+});
+</script><!-- evasion -->
+
+<script type="text/worker">
+on("change:twis change:refresher", function() {
+	getAttrs(["twis"], function(v) {
+		let twisTotal = v.twis ;
+		let SDEF = Math.floor(twisTotal/2);
+		setAttrs({ sdef: SDEF }); 
+	});
+});
+</script><!-- spdef -->
+
+<script type="text/worker">
+on("change:twis change:refresher", function() {
+	getAttrs(["twis"], function(v) {
+		console.log("twis = " + v.twis);
+		let twisTotal = Math.floor(v.twis/5) ;
+		let MAXMOVES = twisTotal + 3;
+		setAttrs({ maxmoves: MAXMOVES }); 
+	});
+});
+</script><!-- maxmoves -->
+
+<script type="text/worker">
+on("change:tdex change:refresher", function() {
+	getAttrs(["tdex"], function(v) {
+		let tdexTotal = Math.floor(v.tdex/50) ;
+		let MAXMOVEMENT = tdexTotal + 4;
+		setAttrs({ maxmovement: MAXMOVEMENT}); 
+	});
+});
+</script><!-- maxmovements -->
+
+<script type="text/worker">
+on("change:tdex change:refresher", function() {
+	getAttrs(["tdex"], function(v) {
+		let tdexTotal = Math.floor(v.tdex/50) ;
+		let MAXEVADES = tdexTotal;
+		setAttrs({ maxevades: MAXEVADES}); 
+	});
+});
+</script><!-- maxevades -->
+
+<script type="text/worker">
+on("change:tdex change:refresher", function() {
+	getAttrs(["tdex"], function(v) {
+		let tdexTotal = v.tdex;
+		let ACC = tdexTotal;
+		setAttrs({ acc: ACC }); 
+	});
+});
+</script><!-- accuraccy -->
+
+<script type="text/worker">
+on("change:tcon change:refresher", function() {
+	getAttrs(["tcon"], function(v) {
+		let tconTotal = v.tcon * 1;
+		let Def = Math.floor(tconTotal/2);
+		setAttrs({ def: Def }); 
+	});
+});
+</script><!-- def -->
+
+<script type="text/worker">
+on("change:lvl change:refresher", function() {
+	getAttrs(["lvl"], function(v) {
+		let lvlTotal = v.lvl * 12;
+		let TOTALSTAT = lvlTotal;
+		setAttrs({ totalstat: TOTALSTAT }); 
+	});
+});
+</script><!-- totalstat -->
+
+<script type="text/worker">
+on("change:lvl change:refresher", function() {
+	getAttrs(["lvl"], function(v) {
+		let lvlTotal = v.lvl * 5;
+		let TTOTALSTAT2 = lvlTotal;
+		setAttrs({ individualstat: TTOTALSTAT2 }); 
+	});
+});
+</script><!-- individualstat -->
